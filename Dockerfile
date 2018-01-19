@@ -10,8 +10,9 @@ ENV PATH=${CUDA_PATH}/bin:$PATH
 ENV DYLD_LIBRARY_PATH=${CUDA_PATH}/lib64:${CUDA_PATH}/lib64/stubs:$DYLD_LIBRARY_PATH
 ENV LD_LIBRARY_PATH=${CUDA_PATH}/lib64:${CUDA_PATH}/lib64/stubs:$LD_LIBRARY_PATH
 ENV CPATH ${CUDA_PATH}/include:$CPATH
-ENV CHAINER_VER 3.2.0
-RUN pip install cupy chainer==${CHAINER_VER} matplotlib Pillow requests
+ENV CUPY_VER 4.0.0b2
+ENV CHAINER_VER 4.0.0b2
+RUN pip install cupy==${CUPY_VER} chainer==${CHAINER_VER} matplotlib Pillow requests
 RUN pip install git+https://github.com/yasuyuky/chainer-ya-utils
 RUN mkdir /work
 WORKDIR /work

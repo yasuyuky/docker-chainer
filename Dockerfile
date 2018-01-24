@@ -1,4 +1,4 @@
-FROM chainer/chainer:latest-python3
+FROM chainer/chainer:v4.0.0b3-python3
 MAINTAINER Yasuyuki YAMADA <yasuyuki.ymd@gmail.com>
 
 RUN apt-get update -y && apt-get install -y curl=* git=*

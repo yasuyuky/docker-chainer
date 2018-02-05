@@ -1,9 +1,19 @@
-FROM chainer/chainer:v4.0.0b3-python3
+FROM nvidia/cuda:8.0-cudnn7-devel
 MAINTAINER Yasuyuki YAMADA <yasuyuki.ymd@gmail.com>
 
-RUN apt-get update -y && apt-get install -y curl=* git=*
-RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" && python3 get-pip.py && rm get-pip.py
-RUN pip install matplotlib Pillow git+https://github.com/yasuyuky/chainer-ya-utils
+RUN apt-get update -y && \
+    apt-get install -y --no-install-recommends \
+    python3-dev \
+    python3-pip \
+    python3-wheel \
+    python3-setuptools \
+    python3 \
+    curl \
+    git \
+    && \
+    rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
+
+RUN pip3 install cupy==4.0.0b3 chainer==4.0.0b3 matplotlib Pillow git+https://github.com/yasuyuky/chainer-ya-utils
 RUN mkdir /work
 WORKDIR /work
 ENV HOME /work

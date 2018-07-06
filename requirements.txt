@@ -1,0 +1,5 @@
+cupy==4.0.0
+chainer==4.0.0
+matplotlib
+Pillow
+git+https://github.com/yasuyuky/chainer-ya-utils

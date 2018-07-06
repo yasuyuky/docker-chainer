@@ -12,8 +12,8 @@ RUN apt-get update -y && \
     git \
     && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
-
-RUN pip3 install cupy==4.0.0 chainer==4.0.0 matplotlib Pillow git+https://github.com/yasuyuky/chainer-ya-utils
+COPY requirements.txt /requirements.txt
+RUN pip3 install -r requirements.txt
 RUN mkdir /work
 WORKDIR /work
 ENV HOME /work

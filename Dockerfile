@@ -1,4 +1,4 @@
-FROM nvidia/cuda:8.0-cudnn7-devel
+FROM nvidia/cuda:9.2-cudnn7-devel
 MAINTAINER Yasuyuki YAMADA <yasuyuki.ymd@gmail.com>
 
 RUN apt-get update -y && \

@@ -1,5 +1,5 @@
 cupy==10.0.0
-chainer==7.8.0
+chainer==7.8.1
 matplotlib==3.5.1
 Pillow==9.0.0
 git+https://github.com/yasuyuky/chainer-ya-utils

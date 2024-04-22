@@ -1,4 +1,4 @@
-cupy==13.0.0
+cupy==13.1.0
 chainer==7.8.1
 matplotlib==3.8.4
 Pillow==10.3.0
